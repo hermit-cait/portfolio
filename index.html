@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Caitlin Eybers</title>  
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+
+<body>
+
+  <header>
+
+    <input type='checkbox' id='navToggle' class='navToggle'>    
+
+      <div class="logoContainer">
+        <div class="logo">
+          <ion-icon name='planet-outline'>
+            <a href="index.html"></a>
+          </ion-icon>
+        </div>
+        <a href="index.html">Caitlin Eybers</a>  
+      </div>
+
+    <nav>
+      <ul>
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>           
+    </nav>    
+
+    <label for='navToggle' class='navToggleLabel'>
+      <span class="navButton"></span>
+    </label>
+
+  </header>
+
+  <section class="hero" id="hero">
+
+    <h1>Hi, my name is Caitlin Eybers and I am a front-end web developer.</h1>
+    <p>I build websites that are well designed and easy to use. I am passionate about the internet and the experience of navigating it. I would love to work with you to make the web a more accessible and beautiful place.</p>
+
+  </section>
+
+  <section class="aboutMe" id="aboutMe">
+
+    <h2>About Me</h2>
+
+    <p>I am a self starter and work ethic and creativity are equally important to me. My life revolves around art, music, writing, skateboarding and getting my hands dirty working in a retail store. Front-end development and UX/UI are what I gravitate to most but I am also motivated to keep learning more and more about back-end -- specifically PHP and MySQL.</p>
+
+    <div class="wrapperCV">
+      <a href="#" class="buttonCV">View my CV</a>
+    </div>
+
+    <p class="techLabel">Technologies I use:</p>
+
+    <div class="techContainer">
+      
+      <div class="tech">
+        <ion-icon name='logo-html5'></ion-icon>
+        <span>HTML</span>
+      </div>
+      <div class="tech">
+        <ion-icon name='logo-css3'></ion-icon>
+        <span>CSS</span>
+      </div>
+      <div class="tech">
+        <ion-icon name='logo-javascript'></ion-icon>    
+        <span>Javascript</span>
+      </div>    
+      <div class="tech">
+        <ion-icon name='logo-react'></ion-icon>            
+        <span>React</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="projects" id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="cardContainer">
+      <div class="card card-1"></div>
+      <div class="card card-2"></div>
+    </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <h2>Contact</h2>
+
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xyyaqlkz" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Name</label>
+        <input type="text" name="name" id="full-name" required="">
+        <label for="email-address">Email</label>
+        <input type="email" name="_replyto" id="email-address" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+
+      <div class="submit">
+        <input class="submit" type="submit" value="Submit">
+      </div>
+    </form>     
+
+    <script src="script.js"></script> 
+
+  </section>
+
+  <footer><p>Website created by Caitlin</p></footer>
+
+  <script src="script.js"></script> 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
