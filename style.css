@@ -342,9 +342,22 @@ span.navButton {
     background-image: linear-gradient(270deg, var(--bg-light-green),var(--bg-dark-green));
     background-size: 400% 400%;  
     background-clip: text;
+    -webkit-background-clip: text;
     animation: headingGradient 7s ease infinite;
   }
   
+  @-webkit-keyframes headingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+  @-moz-keyframes headingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
   @keyframes headingGradient {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
