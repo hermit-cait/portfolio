@@ -6,19 +6,37 @@ html {
   scroll-behavior: smooth;
 }
 
-/* TABLE OF CONTENTS: */
+:root {
+  --bg-light-grey: #e0ecda;
+  --bg-light-green: #6bec20;
+  --bg-dark-green: #3c9911;
+  --text-dark-green: #003b0a;
+}
 
-/* 1. Mobile text styles */
-/* 2. Mobile layout */
-/* 3. Mobile navigation formatting */
-/* 4. Media queries for tablets */
-/* 5. Desktop text styles */
-/* 6. Desktop layout */
+/*** TABLE OF CONTENTS: ***/
 
-/* 1. Mobile text styles */
+/* Mobile text styles */
+/* Mobile font sizes */
+/* Mobile layout */
+/* About Me section - mobile */
+/* Projects section - mobile */
+/* Contact section - mobile */
+/* Mobile navigation formatting */
+/* Heading gradient animation */
+/* Media queries for tablets */
+/* Desktop text styles */
+/* Desktop layout */
+/* Desktop navigation formatting */
+
+
+/* -------------------------------- */
+
+
+/* Mobile text styles */
 
 h1,
 h2,
+h3,
 a,
 p,
 span,
@@ -42,6 +60,13 @@ ul {
   list-style: none;  
 }
 
+h2,
+footer {
+  text-align: center;
+}
+
+/* Mobile font sizes */
+
 h1 {
   font-size: 3rem;
 }
@@ -50,42 +75,40 @@ h2 {
   font-size: 2rem;
 }
 
-p,
-a.button {
-  font-size: 1.3rem;
+h3 {
+  font-size: 1.5rem;
 }
 
+p,
+a.button,
+.logoContainer a,
 label,
 input {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 footer p {
   font-size: 1rem;
 }
 
-h2,
-footer {
-  text-align: center;
-}
-
-/* 2. Mobile layout */
+/* Mobile layout */
 
 body {
-  margin-inline: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .logoContainer {
   width: 100%;
-  height: 50px;
+  height: 3.5rem;
   display: flex;
   justify-content: center;  
   align-items: center;
 }
 
 .logo ion-icon {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-inline: 0.5rem;
   transform: rotateY(180deg);
 }
@@ -95,8 +118,11 @@ body {
 }
 
 section {
-  margin-top: 4rem;
+  margin-top: 6rem;
+  margin-inline: 1rem;
 }
+
+/* About Me section - mobile */
 
 .techContainer {
   display: flex;
@@ -107,9 +133,9 @@ section {
 
 .tech {
   background-color: black;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 150px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,8 +144,8 @@ section {
 
 .tech ion-icon {
   color: white;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .tech span {
@@ -128,14 +154,13 @@ section {
 }
 
 .button {
-  height: 5rem;
-  border-radius: 1.5rem;
-  border: black solid 1px;
-  padding: 0.5rem;
+  background-color: var(--bg-light-green);
+  border-radius: 3rem;
+  padding: 1.3rem;
 }
 
 .wrapperCV {
-  padding-block: 1rem;
+  padding-block: 3rem;
 }
 
 .techLabel,
@@ -143,12 +168,14 @@ section {
   text-align: center;
 }
 
+/* Projects section - mobile */
+
 .card {
-  border: black solid 1px;
+  background-color: var(--bg-light-grey);
   border-radius: 1rem;
   width: clamp(20rem, 90%, 30rem);
-  height: 30rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -177,9 +204,7 @@ section {
   margin-right: 0.5rem;
 }
 
-label {
-  margin-top: 1rem;
-}
+/* Contact section - mobile */
 
 fieldset {
   width: clamp(15rem, calc(100% - 3rem), 30rem);
@@ -195,26 +220,29 @@ fieldset {
   margin-bottom: 1rem;
 }
 
+label {
+  margin-top: 1rem;
+}
+
 .submit {
-  margin-block: 0.5rem;
   text-align: center;
+  border-radius: 2rem;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
 }
 
 footer {
   background-color: black;
   color: white;
-  width: max-content;
-  height: 3rem;
-  margin: 0 auto;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  padding-inline: 1rem;
+  width: 100%;
+  height: 8rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 3. Mobile navigation formatting */
+/* Mobile navigation formatting */
 
 nav {
   background-color: white;
@@ -235,6 +263,11 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
+.logoContainer {  
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
 nav li {
   font-size: 1.3rem;
   padding: 1rem;
@@ -249,6 +282,11 @@ nav li {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+.navToggle:checked ~ .logoContainer {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
 span.navButton {
   color: black;
 }
@@ -259,7 +297,7 @@ span.navButton {
 
 .navToggleLabel {
   position: absolute;
-  top: -1rem;
+  top: -1.3rem;
   left: 0;
   margin-left: 1rem;
   height: 4rem;
@@ -291,12 +329,35 @@ span.navButton {
   top: 10px;
 }
 
-/* 4. Media queries for tablets */
+/* Heading gradient animation */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  h1 {
+    background-image: linear-gradient(270deg, var(--bg-light-green),var(--bg-dark-green));
+    background-size: 400% 400%;  
+    background-clip: text;
+    animation: headingGradient 7s ease infinite;
+  }
+  
+  @keyframes headingGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  
+  span.green {
+    color: transparent;
+  }
+
+}
+
+/* Media queries for tablets */
 
 @media (min-width: 600px) {
-  
-  h1,
-  p {
+
+  section {
+    width: clamp(30rem, calc(60% - 10rem), 50rem);
     margin: 0 auto;
   }
 
@@ -306,9 +367,19 @@ span.navButton {
 
 @media (min-width: 1200px) {
 
-  /* 5. Desktop text styles */
+  /* Desktop text styles */
 
-  /* 6. Desktop layout */
+  .logoContainer a {
+    font-size: 1rem;
+  }
+
+  .logo ion-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Desktop layout */
 
   body {
     margin: 0;
@@ -323,28 +394,25 @@ span.navButton {
     margin-bottom: 3rem;
   }
 
-  footer {
-    width: 100%;
-    height: 8rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* 7. Desktop navigation formatting */
+  /* Desktop navigation formatting */
 
   .navToggleLabel {
     display: none;
   }
   
   header {
+    height: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .logoContainer {
     padding: 0;
-    height: 3rem;
-    grid-column: 1 / 2;    
+    height: 51px;
+    margin-left: 2rem;
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -356,9 +424,9 @@ span.navButton {
   }
 
   nav {
-    height: 3rem;
     all: unset;
-    grid-column: 2 / 3;
+    grid-column: 2 / 3;     
+    grid-row: 2 / 3;
     display: flex;
     justify-content: flex-end;
   }
@@ -369,7 +437,9 @@ span.navButton {
 
   nav li {
     font-size: 1rem;
-    margin-inline: 1.5rem;
+    margin-left: 0;
+    margin-right: 5rem;
+    padding: 0;
   }
 
   nav a {
@@ -383,7 +453,7 @@ span.navButton {
     height: 3px;
     background: black; 
     position: absolute;
-    top: -0.35rem;
+    top: -0.75rem;
     left: 0;
     right: 0; 
     transform: scale(0, 1);
@@ -392,12 +462,6 @@ span.navButton {
 
   nav a:hover::before {
     transform: scale(1, 1);
-  }
-
-  nav li {
-    margin-left: 0;
-    margin-right: 5rem;
-    padding: 0;
   }
 
 }
