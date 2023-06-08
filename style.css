@@ -125,10 +125,15 @@ section {
 /* About Me section - mobile */
 
 .techContainer {
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;  
   justify-content: center;
   gap: 1rem;
+}
+
+.techLabel {
+  width: 100%;
 }
 
 .tech {
@@ -356,9 +361,17 @@ span.navButton {
 
 @media (min-width: 600px) {
 
-  section {
+  section:not(.techContainer) {
     width: clamp(30rem, calc(60% - 10rem), 50rem);
     margin: 0 auto;
+  }
+
+  section {
+    padding-top: 8rem;
+  }
+
+  .techContainer {
+    padding-top: 0;
   }
 
 }
@@ -384,10 +397,6 @@ span.navButton {
   body {
     margin: 0;
     padding: 0;
-  }
-
-  section {
-    margin-top: 8rem;
   }
 
   .submit {
