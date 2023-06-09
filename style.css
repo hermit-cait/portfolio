@@ -305,8 +305,8 @@ nav li {
 #navClose {  
   position: absolute;
   opacity: 0;
-  transition: opacity 600ms ease-in-out;
-  -webkit-transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out 600ms;
+  -webkit-transition: opacity 600ms ease-in-out 600ms;
 }
 
 .navCloseShift {  
