@@ -8,9 +8,10 @@ html {
 
 :root {
   --bg-light-grey: #e0ecda;
+  --bg-mid-grey: #9cb492;;
   --bg-light-green: #6bec20;
   --bg-dark-green: #3c9911;
-  --text-dark-green: #003b0a;
+  --text-green: #007013;
 }
 
 /*** TABLE OF CONTENTS: ***/
@@ -40,6 +41,7 @@ h3,
 a,
 p,
 span,
+legend,
 label,
 input,
 textarea {
@@ -81,14 +83,18 @@ h3 {
 
 p,
 a.button,
-.logoContainer a,
-label,
-input {
-  font-size: 1.2rem;
+.logoContainer a {
+  font-size: 1.1rem;
 }
 
-footer p {
+footer p,
+label,
+input {
   font-size: 1rem;
+}
+
+legend {
+  font-size: 1.2rem;
 }
 
 /* Mobile layout */
@@ -158,8 +164,12 @@ section {
   font-size: 1.3rem;
 }
 
+.react {
+  display: none;      /* 😭😭😭 */
+}
+
 .button {
-  background-color: var(--bg-light-green);
+  background-color: var(--bg-mid-grey);
   border-radius: 3rem;
   padding: 1.3rem;
 }
@@ -257,20 +267,16 @@ nav {
   left: 0;
   width: 100%;
   padding: 4rem 0 2rem 0;
+  z-index: 0;
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 400ms ease-in-out;
+  transition: transform 500ms ease-in 100ms ease-out;
 }
 
 nav a {
   text-decoration: none;
   opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-
-.logoContainer {  
-  opacity: 1;
-  transition: opacity 150ms ease-in-out;
+  transition: opacity 1300ms ease-in-out;
 }
 
 nav li {
@@ -278,60 +284,35 @@ nav li {
   padding: 1rem;
 }
 
-.navToggle:checked ~ nav {
-  transform: scale(1, 1);
+.navButtons {
+  height: 0;
 }
 
-.navToggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+.navButtons ion-icon {
+  width: 3rem;
+  height: 3rem;
 }
 
-.navToggle:checked ~ .logoContainer {
+#navMenu {
+  position: absolute;
+  left: 0.4rem;
+  transition: opacity 600ms ease-in-out;
+}
+
+#navClose {  
+  position: absolute;
   opacity: 0;
-  transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 600ms ease-in-out;
 }
 
-span.navButton {
-  color: black;
+.navCloseShift {  
+  transform: scale(1, 0);
+  transform-origin: top;
 }
 
-.navToggle {
-  display: none;
-}
-
-.navToggleLabel {
-  position: absolute;
-  top: -1.3rem;
-  left: 0;
-  margin-left: 1rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-}
-
-.navToggleLabel span,
-.navToggleLabel span::before,
-.navToggleLabel span::after {
-  display: block;
-  background: black;
-  height: 3px;
-  width: 2rem;
+.home {
   position: relative;
-}
-
-.navToggleLabel span::before,
-.navToggleLabel span::after {
-  content: '';
-  position: absolute;
-}
-
-.navToggleLabel span::before {
-  bottom: 10px;
-}
-
-.navToggleLabel span::after {
-  top: 10px;
+  z-index: 1;
 }
 
 /* Heading gradient animation */
@@ -418,42 +399,35 @@ span.navButton {
 
   /* Desktop navigation formatting */
 
-  .navToggleLabel {
+  .navButtons ion-icon {
     display: none;
   }
-  
+
   header {
-    height: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .logoContainer {
-    padding: 0;
-    height: 51px;
-    margin-left: 2rem;
-    grid-column: 1 / 2; 
-    grid-row: 2 / 3;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .logoContainer a {
-    display: flex;
     justify-content: flex-start;
   }
 
-  nav {
+  nav {    
     all: unset;
-    grid-column: 2 / 3;     
-    grid-row: 2 / 3;
     display: flex;
     justify-content: flex-end;
   }
 
-  nav ul {
+  .navContainer {
+    height: 3rem;
+    display: flex;
+  }
+
+  nav ul {    
     display: flex;
   }
 
@@ -466,6 +440,7 @@ span.navButton {
 
   nav a {
     opacity: 1;
+    transition: none;
     position: relative;
   }
 
@@ -475,7 +450,7 @@ span.navButton {
     height: 3px;
     background: black; 
     position: absolute;
-    top: -0.75rem;
+    top: -0.45rem;
     left: 0;
     right: 0; 
     transform: scale(0, 1);
