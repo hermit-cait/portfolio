@@ -358,10 +358,7 @@ nav li {
   section:not(.techContainer) {
     width: clamp(30rem, calc(60% - 10rem), 50rem);
     margin: 0 auto;
-  }
-
-  section {
-    padding-top: 8rem;
+    margin-top: 8rem;
   }
 
   .techContainer {
