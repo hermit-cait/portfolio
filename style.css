@@ -8,10 +8,10 @@ html {
 
 :root {
   --bg-light-grey: #e0ecda;
-  --bg-mid-grey: #9cb492;;
+  --bg-mid-grey-mobile: #979797;
+  --bg-mid-grey-desktop: #9cb492;
   --bg-light-green: #6bec20;
   --bg-dark-green: #3c9911;
-  --text-green: #007013;
 }
 
 /*** TABLE OF CONTENTS: ***/
@@ -169,7 +169,7 @@ section {
 }
 
 .button {
-  background-color: var(--bg-mid-grey);
+  background-color: var(--bg-mid-grey-mobile);
   border-radius: 3rem;
   padding: 1.3rem;
 }
@@ -392,6 +392,10 @@ nav li {
   body {
     margin: 0;
     padding: 0;
+  }
+
+  .button {
+    background-color: var(--bg-mid-grey-desktop);
   }
 
   .submit {
