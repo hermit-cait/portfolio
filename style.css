@@ -230,7 +230,6 @@ img {
 
 .cardText {
   width: 85%;
-  height: calc(6rem + 4%);
   margin: 1.5rem auto;
 }
 
@@ -408,6 +407,10 @@ nav li {
   body {
     margin: 0;
     padding: 0;
+  }
+
+  .cardText {    
+    height: calc(6rem + 4%);
   }
 
   .button {
