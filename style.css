@@ -94,6 +94,7 @@ input {
 
 legend {
   font-size: 1.2rem;
+  align-text: center;
 }
 
 /* Mobile layout */
