@@ -438,11 +438,18 @@ nav li {
     top: 0;
     display: flex;
     justify-content: space-between;
-    box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.3);
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(200, 200, 200, 0.1);
   }
 
   .logoContainer {
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
+  }
+
+  .svgLogo {
+    display: flex;
   }
 
   nav {    
@@ -458,6 +465,7 @@ nav li {
 
   nav ul {    
     display: flex;
+    align-items: center;
   }
 
   nav li {
