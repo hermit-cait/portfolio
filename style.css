@@ -10,6 +10,7 @@ html {
   --bg-light-grey: #e9e9e9;
   --bg-mid-grey: #b6b6b6;
   --bg-light-green: #82ff3a;
+  --bg-mid-green: #bce9a3;
   --bg-dark-green: #154200;
 }
 
@@ -172,7 +173,7 @@ section {
 }
 
 .button {
-  background-color: var(--bg-mid-grey);
+  background-color: var(--bg-mid-green);
   border-radius: 3rem;
   padding: 1.3rem;
 }
@@ -415,10 +416,6 @@ nav li {
 
   .cardText {    
     height: calc(6rem + 4%);
-  }
-
-  .button {
-    background-color: var(--bg-mid-grey);
   }
 
   .submit {
