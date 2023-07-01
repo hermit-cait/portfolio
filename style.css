@@ -414,8 +414,13 @@ nav li {
     padding: 0;
   }
 
-  .cardText {    
-    height: calc(6rem + 4%);
+  .cardText {
+    height: 120px;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .submit {
@@ -447,6 +452,7 @@ nav li {
 
   .svgLogo {
     display: flex;
+    margin-block-start: 3px;
   }
 
   nav {    
