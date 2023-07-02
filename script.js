@@ -29,11 +29,33 @@ function navCloseMenu() {
   document.getElementById("navMenu").style.opacity = "1";
 }
 
+// Matches height of card paragraph to the heighest adjacent paragraph provided the viewport is large enough
+
+var mediaQueryMin = window.matchMedia("(min-width: 600px)")
+
+mediaQueryMin.addEventListener('change', function(media) {
+
+  function thisHeight() {
+    return $(this).height();
+  }
+
+  $('.cardContainer').each(function() {
+    var height = Math.max.apply(Math, $(this).find('.auto-height').map(thisHeight));
+    $(this).find('.auto-height').height(height);
+  });
+
+  if (media.matches) {      
+    thisHeight();
+  } else {      
+    return null;
+  }
+});
+
 // When menu is opened in small viewport and then the window is enlarged the desktop nav would disappear so this ensures that the nav bar is always visible
 
-var widthMatch = window.matchMedia("(min-width: 1200px)");
+var mediaQueryDesktop = window.matchMedia("(min-width: 1200px)");
 
-widthMatch.addEventListener('change', function(media) {
+mediaQueryDesktop.addEventListener('change', function(media) {
     if (media.matches) {        
       document.getElementById("nav").style.transform = "scale(1, 1)";
     }
@@ -50,12 +72,5 @@ window.onbeforeunload = () => {
   }
 }
 
-// Matches height of card paragraph to the heighest adjacent paragraph
 
-function thisHeight(){
-  return $(this).height();
-}
-$('.cardContainer').each(function(){
-  var height = Math.max.apply(Math, $(this).find('.auto-height').map(thisHeight));
-  $(this).find('.auto-height').height(height);
-});
+
