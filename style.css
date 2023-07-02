@@ -234,7 +234,8 @@ img {
 
 .cardText {
   width: 85%;
-  margin: 1.5rem auto;
+  margin: 0 auto;
+  margin-block: 1rem 3rem;
 }
 
 /* Contact section - mobile */
@@ -388,6 +389,10 @@ nav li {
     padding-top: 0;
   }
 
+  .cardText {    
+    margin-block: 1.5rem 4rem;
+  }
+
 }
 
 /* DESKTOP MEDIA QUERIES */
@@ -411,10 +416,6 @@ nav li {
   body {
     margin: 0;
     padding: 0;
-  }
-
-  .cardText {
-    margin-block-end: 3.2rem;
   }
 
   .contentWrapper {
