@@ -7,11 +7,10 @@ html {
 }
 
 :root {
-  --bg-light-grey: #eaf0db;
-  --bg-mid-grey: #b6b6b6;
-  --bg-light-green: #82ff3a;
-  --bg-mid-green: #c5e9a3;
+  --bg-bold-green: #82ff3a;
   --bg-dark-green: #154200;
+  --bg-pale-green: #c5e9a3;
+  --bg-light-grey: #eaf0db;
 }
 
 /*** TABLE OF CONTENTS: ***/
@@ -173,7 +172,7 @@ section {
 }
 
 .button {
-  background-color: var(--bg-mid-green);
+  background-color: var(--bg-pale-green);
   border-radius: 3rem;
   padding: 1.3rem;
 }
@@ -230,7 +229,7 @@ img {
   width: 85%;
   border-radius: 1rem;
   margin: 0 auto;
-  box-shadow: 2px 2px 5px var(--bg-mid-grey);
+  box-shadow: 2px 2px 5px rgb(170, 173, 163);
 }
 
 .cardText {
@@ -343,7 +342,7 @@ nav li {
 @media (prefers-reduced-motion: no-preference) {
 
   h1 {
-    background-image: linear-gradient(270deg, var(--bg-light-green),var(--bg-dark-green));
+    background-image: linear-gradient(270deg, var(--bg-bold-green),var(--bg-dark-green));
     background-size: 400% 400%;  
     background-clip: text;
     -webkit-background-clip: text;
