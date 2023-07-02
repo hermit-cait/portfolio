@@ -415,7 +415,7 @@ nav li {
   }
 
   .cardText {
-    height: 120px;
+    margin-block-end: 1.5rem;
   }
 
   .contentWrapper {
