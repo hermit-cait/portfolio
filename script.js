@@ -50,3 +50,12 @@ window.onbeforeunload = () => {
   }
 }
 
+// Matches height of card paragraph to the heighest adjacent paragraph
+
+function thisHeight(){
+  return $(this).height();
+}
+$('.cardContainer').each(function(){
+  var height = Math.max.apply(Math, $(this).find('.auto-height').map(thisHeight));
+  $(this).find('.auto-height').height(height);
+});
