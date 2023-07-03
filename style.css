@@ -167,10 +167,6 @@ section {
   font-size: 1.3rem;
 }
 
-.react {
-  display: none;      /* 😭😭😭 */
-}
-
 .button {
   background-color: var(--bg-pale-green);
   border-radius: 3rem;
