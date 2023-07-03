@@ -29,16 +29,6 @@ function navCloseMenu() {
   document.getElementById("navMenu").style.opacity = "1";
 }
 
-// Matches height of card paragraph to the heighest adjacent paragraph
-
-function thisHeight() {
-  return $(this).height();
-}
-$('.cardContainer').each(function() {
-  var height = Math.max.apply(Math, $(this).find('.auto-height').map(thisHeight));
-  $(this).find('.auto-height').height(height);
-});
-
 // When menu is opened in small viewport and then the window is enlarged the desktop nav would disappear so this ensures that the nav bar is always visible
 
 var mediaQueryDesktop = window.matchMedia("(min-width: 1200px)");
