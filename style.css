@@ -10,7 +10,7 @@ html {
   --bg-bold-green: #82ff3a;
   --bg-dark-green: #154200;
   --bg-pale-green: #c5e9a3;
-  --bg-light-grey: #ecf0e3;
+  --bg-light-grey: #f0f2eb;
 }
 
 /*** TABLE OF CONTENTS: ***/
@@ -127,18 +127,18 @@ body {
 }
 
 .hero {
-  margin-top: 10rem;
+  margin-block-start: 10rem;
 }
 
 section {
-  margin-top: 6rem;
+  margin-block-start: 6rem;
   margin-inline: 1rem;
 }
 
 /* About Me section - mobile */
 
 .techContainer {
-  margin-top: 0;
+  margin-block-start: 0;
   display: flex;
   flex-wrap: wrap;  
   justify-content: center;
@@ -169,10 +169,6 @@ section {
 .tech span {
   color: white;
   font-size: 1.3rem;
-}
-
-.react {
-  display: none;      /* 😭😭😭 */
 }
 
 .button {
@@ -216,7 +212,7 @@ section {
   display: flex;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-block: 2rem 1rem;
 }
 
 .card a {
@@ -226,7 +222,7 @@ section {
 .button ion-icon {
   width: 2rem;
   height: 2rem;
-  margin-right: 0.5rem;
+  margin-inline-end: 0.5rem;
 }
 
 img {
@@ -255,11 +251,11 @@ fieldset {
 #email-address,
 #message {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 label {
-  margin-top: 1rem;
+  margin-block-start: 1rem;
 }
 
 .submit {
@@ -274,7 +270,7 @@ footer {
   color: white;
   width: 100%;
   height: 8rem;
-  margin-top: 5rem;
+  margin-block-start: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,11 +382,11 @@ nav li {
   .aboutMe {
     width: clamp(30rem, calc(60% - 10rem), 50rem);
     margin: 0 auto;
-    margin-top: 8rem;
+    margin-block-start: 8rem;
   }
 
   .techContainer {
-    padding-top: 0;
+    padding-block-start: 0;
   }
 
   .cardText {    
@@ -412,7 +408,7 @@ nav li {
   .logo ion-icon {
     width: 3rem;
     height: 3rem;
-    margin-bottom: 0.2rem;
+    margin-block-end: 0.2rem;
   }
 
   /* Desktop layout */
@@ -422,13 +418,34 @@ nav li {
     padding: 0;
   }
 
-  .contentWrapper {
-    display: flex;
-    flex-direction: column;
+  .card,
+  img {
+    display: block;
+  }
+
+  h3,
+  .buttonWrapper {
+    text-align: center;
+  }
+
+  .card .button {
+    display: inline-block;
+    width: fit-content;
+    margin-inline: 0.3rem;
+    margin-block: 3rem 1.5rem;
+  }
+
+  .card span {    
+    display: inline-block;
+    transform: translateY(-0.55rem);
+  }
+
+  .cardText {
+    margin-block: 1rem 3rem;
   }
 
   .submit {
-    margin-bottom: 3rem;
+    margin-block-end: 3rem;
   }
 
   /* Desktop navigation formatting */
@@ -477,8 +494,8 @@ nav li {
 
   nav li {
     font-size: 1rem;
-    margin-left: 0;
-    margin-right: 5rem;
+    margin-inline-start: 0;
+    margin-inline-end: 5rem;
     padding: 0;
   }
 
