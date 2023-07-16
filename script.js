@@ -81,13 +81,13 @@ function populateProjects(obj) {
     myH3.textContent = project.name;
     template.innerHTML = `
       <div class="buttonWrapper">
-        <a href="https://hermit-cait.github.io/song-series/" target="_blank" class="button buttonDemo">
+        <a href="${project.buttonDemo}" target="_blank" class="button buttonDemo" id="buttonDemo">
           <ion-icon name='globe-outline'></ion-icon>
           <span>
             Live Demo
           </span>
         </a>
-        <a href="https://github.com/hermit-cait/song-series" target="_blank" class="button buttonCode">
+        <a href="${project.buttonCode}" target="_blank" class="button buttonCode" id="buttonCode">
           <ion-icon name='logo-github'></ion-icon>
           <span>
             View Code
@@ -110,4 +110,3 @@ function populateProjects(obj) {
 }
 
 populate()
-
