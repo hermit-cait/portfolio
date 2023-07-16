@@ -4,6 +4,7 @@
       {
         "image": "https://raw.githubusercontent.com/hermit-cait/portfolio/main/project1.gif",
         "name": "The Song Series",
+        "extension": "song-series",
         "tech": ["HTML", " CSS"],
         "description": "This is a set of three static webpages made with vanilla CSS that are each inspired by one of my favourite songs. My intention with this project was to practice the mobile first approach to creating responsive websites."
       },
@@ -11,6 +12,7 @@
       {
         "image": "https://raw.githubusercontent.com/hermit-cait/portfolio/main/project2.gif",
         "name": "Portfolio",
+        "extension": "portfolio",
         "tech": ["HTML", " CSS"],
         "description": "This is my portfolio webpage built using HTML, CSS and Javascript. My plan was to use a very minimalist design and colour scheme with a little touch of bright green."
       },
@@ -18,6 +20,7 @@
       {
         "image": "https://raw.githubusercontent.com/hermit-cait/portfolio/main/project3.gif",
         "name": "Todo App",
+        "extension": "todo",
         "tech": ["React"],
         "description": "This is a to-do list built using React. I made this simple application in order to familiarise myself with a Javascript library. It includes an editing feature, a clear button and I am currently busy integrating localStorage."
       }
