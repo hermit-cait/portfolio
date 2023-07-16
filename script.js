@@ -31,7 +31,7 @@ function navCloseMenu() {
 
 // When menu is opened in small viewport and then the window is enlarged the desktop nav would disappear so this ensures that the nav bar is always visible
 
-var mediaQueryDesktop = window.matchMedia("(min-width: 1200px)");
+let mediaQueryDesktop = window.matchMedia("(min-width: 1200px)");
 
 mediaQueryDesktop.addEventListener('change', function(media) {
     if (media.matches) {        
@@ -49,6 +49,3 @@ window.onbeforeunload = () => {
     form.reset();
   }
 }
-
-
-
