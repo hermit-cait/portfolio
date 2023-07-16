@@ -90,6 +90,12 @@ a.button,
   font-size: 1.1rem;
 }
 
+.projectTech {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
 footer p,
 label,
 input {
@@ -188,7 +194,7 @@ section {
 
 /* Projects section - mobile */
 
-.card {
+article {
   background-color: var(--bg-light-grey);
   border-radius: 1rem;
   width: clamp(20rem, 90%, 30rem);
@@ -206,7 +212,7 @@ section {
   gap: 2rem;
 }
 
-.card .button {
+article .button {
   height: 4rem;
   border-radius: 5rem;
   display: flex;
@@ -215,7 +221,7 @@ section {
   margin-block: 2rem 1rem;
 }
 
-.card a {
+article a {
   text-align: center;
 }
 
@@ -232,7 +238,7 @@ img {
   box-shadow: 2px 2px 5px rgb(170, 173, 163);
 }
 
-.cardText {
+article p {
   width: 85%;
   margin: 0 auto;
   margin-block: 1rem 3rem;
@@ -418,7 +424,7 @@ nav li {
     padding: 0;
   }
 
-  .card,
+  article,
   img {
     display: block;
   }
@@ -428,19 +434,19 @@ nav li {
     text-align: center;
   }
 
-  .card .button {
+  article .button {
     display: inline-block;
     width: fit-content;
     margin-inline: 0.3rem;
     margin-block: 3rem 1.5rem;
   }
 
-  .card span {    
+  article span {    
     display: inline-block;
     transform: translateY(-0.55rem);
   }
 
-  .cardText {
+  .description {
     margin-block: 1rem 3rem;
   }
 
