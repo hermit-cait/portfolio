@@ -25,7 +25,7 @@
         "buttonDemo": "https://hermit-cait.github.io/todo/",
         "buttonCode": "https://github.com/hermit-cait/todo",
         "tech": ["React"],
-        "description": "This is a to-do list built using React. I made this simple application in order to familiarise myself with a Javascript library. It includes an editing feature, a clear button and I am currently busy integrating localStorage."
+        "description": "This is a to-do list built using React. I made this simple application in order to familiarise myself with a Javascript library. It includes an editing feature, a clear button and it uses localStorage to save your data in your browser."
       }
     ]
   }
